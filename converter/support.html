@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get help with VideoConverts. Contact support and browse frequently asked questions.">
+  <title>Support - VideoConverts</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <img src="assets/app_icon.png" alt="VideoConverts Logo" class="logo-icon">
+        <span class="logo-text">VideoConverts</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="support.html" class="active">Support</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section support-page">
+      <div class="container">
+        <h1 class="page-title">Support</h1>
+        <div class="support-content">
+          <p class="support-intro">Need help with VideoConverts? We're here to assist you.</p>
+          <a href="mailto:support@videoconverts.app" class="btn btn-primary btn-contact">
+            <svg class="email-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Contact Support
+          </a>
+          <p class="support-email">Email: <a href="mailto:support@videoconverts.app">support@videoconverts.app</a></p>
+        </div>
+
+        <div class="faq-section">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item glass">
+              <button class="faq-question" aria-expanded="false">
+                <span>What file formats are supported?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>VideoConverts supports a wide range of formats including MP4, AVI, MOV, MKV, WMV for video; MP3, AAC, WAV, FLAC for audio; and PNG, JPEG, WebP, HEIC for images.</p>
+              </div>
+            </div>
+            <div class="faq-item glass">
+              <button class="faq-question" aria-expanded="false">
+                <span>Is my data private and secure?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. All file conversions happen entirely on your device. Your files are never uploaded to any server, ensuring complete privacy and security.</p>
+              </div>
+            </div>
+            <div class="faq-item glass">
+              <button class="faq-question" aria-expanded="false">
+                <span>Why is my conversion taking so long?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Conversion time depends on file size, format complexity, and your device's processing power. Large video files or high-quality conversions may take longer. Try reducing the output quality for faster results.</p>
+              </div>
+            </div>
+            <div class="faq-item glass">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can I use VideoConverts offline?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! Since all conversions happen locally on your device, you can use VideoConverts completely offline without an internet connection.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="copyright">&copy; 2026 VideoConverts. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        button.closest('.faq-item').classList.toggle('active');
+      });
+    });
+
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (mobileToggle && mainNav) {
+      mobileToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>

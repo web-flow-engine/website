@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppStudio - iOS & Android App Developer</title>
+  <meta name="description" content="We build beautiful mobile applications for iOS and Android. Check out our apps: Media Converter and Zen Sudoku.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+          <path d="M8 16L14 10L20 16L14 22L8 16Z" fill="var(--surface)"/>
+          <path d="M14 16L20 10L26 16L20 22L14 16Z" fill="var(--surface)" opacity="0.6"/>
+        </svg>
+        <span class="logo-text">AppStudio</span>
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="converter/index.html">Media Converter</a></li>
+          <li><a href="sudoku/index.html">Zen Sudoku</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Building Apps That Make a Difference</h1>
+        <p class="hero-tagline">We design and develop beautiful, intuitive applications for iOS and Android devices.</p>
+      </div>
+    </section>
+
+    <section class="section apps-section">
+      <div class="container">
+        <h2 class="section-title">Our Apps</h2>
+        <div class="apps-grid">
+          <div class="app-card glass">
+            <div class="app-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" rx="16" fill="var(--electric-blue)" opacity="0.2"/>
+                <path d="M20 32L28 24L36 32L28 40L20 32Z" fill="var(--electric-blue)"/>
+                <path d="M28 32L36 24L44 32L36 40L28 32Z" fill="var(--electric-blue)" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>Media Converter</h3>
+            <p>Convert videos to any format instantly. Fast, reliable, and easy to use video conversion for all your needs.</p>
+            <a href="converter/index.html" class="btn btn-primary">View App</a>
+          </div>
+          <div class="app-card glass">
+            <div class="app-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" rx="16" fill="var(--emerald-green)" opacity="0.2"/>
+                <rect x="16" y="16" width="32" height="32" rx="4" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="24" y1="16" x2="24" y2="48" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="32" y1="16" x2="32" y2="48" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="40" y1="16" x2="40" y2="48" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="16" y1="24" x2="48" y2="24" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="16" y1="32" x2="48" y2="32" stroke="var(--emerald-green)" stroke-width="2"/>
+                <line x1="16" y1="40" x2="48" y2="40" stroke="var(--emerald-green)" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Zen Sudoku</h3>
+            <p>A calming sudoku puzzle experience with beautiful design. Challenge your mind with thousands of unique puzzles.</p>
+            <a href="sudoku/index.html" class="btn btn-primary">View App</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="copyright">&copy; 2026 AppStudio. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="converter/privacy.html">Media Converter Privacy</a>
+        <a href="converter/support.html">Media Converter Support</a>
+        <a href="sudoku/privacy.html">Zen Sudoku Privacy</a>
+        <a href="sudoku/support.html">Zen Sudoku Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
